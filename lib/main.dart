@@ -1,15 +1,14 @@
-// lib/app.dart
-
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:offgrid_nation_app/core/constants/theme_constants.dart';
+import 'package:offgrid_nation_app/features/root/presentation/widget/chat/conversation_screen.dart';
+import 'package:offgrid_nation_app/features/root/wrapper/root_screen.dart';
 import 'package:offgrid_nation_app/features/splash/presentation/screens/splash_screen.dart';
 import 'package:offgrid_nation_app/features/auth/presentation/screens/login_screen.dart';
 import 'package:offgrid_nation_app/features/auth/presentation/screens/signup_scrceen.dart';
 import 'package:offgrid_nation_app/features/auth/presentation/screens/reset_password_email_screen.dart';
-import 'package:offgrid_nation_app/features/root/presentation/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,8 +28,9 @@ class MyApp extends StatelessWidget {
           '/': (context) => const SplashScreen(),
           '/auth/login': (context) => const LoginScreen(),
           '/auth/signup': (context) => const CreateAccountScreen(),
-          '/home/feed': (context) => const FeedScreen(),
           '/auth/reset': (context) => const ResetPasswordScreen(),
+          '/home': (context) => const RootScreen(),
+          '/conversation': (context) => const ConversationScreen(),
         },
       );
     } else {
@@ -42,8 +42,9 @@ class MyApp extends StatelessWidget {
           '/': (context) => const SplashScreen(),
           '/auth/login': (context) => const LoginScreen(),
           '/auth/signup': (context) => const CreateAccountScreen(),
-          '/home/feed': (context) => const FeedScreen(),
           '/auth/reset': (context) => const ResetPasswordScreen(),
+          '/home': (context) => const RootScreen(),
+          '/conversation': (context) => const ConversationScreen(),
         },
       );
     }

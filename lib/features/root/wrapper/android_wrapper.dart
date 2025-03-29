@@ -99,7 +99,7 @@ class _AndroidWrapperState extends State<AndroidWrapper> {
 
       backgroundColor: Colors.white,
       title: Image.asset(
-        'lib/assets/images/image.png', // Replace with your logo path.
+        'lib/assets/images/logo_black.png', // Replace with your logo path.
         height: 40,
       ),
       actions: [

@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:offgrid_nation_app/assets/data/sample_post_repository.dart';
 import 'package:offgrid_nation_app/core/ui_share/post_widget.dart';
 import 'package:offgrid_nation_app/core/helpers/share_helper.dart';
-import 'package:offgrid_nation_app/features/root/wrapper/main_wrapper.dart';
 
-class FeedScreen extends StatelessWidget {
+class FeedScreen extends StatefulWidget {
   const FeedScreen({super.key});
 
   @override
+  State<FeedScreen> createState() => _FeedScreenState();
+}
+
+class _FeedScreenState extends State<FeedScreen> {
+  int currentTabIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
-    // Wrap your feed content in MainWrapper
-    return MainWrapper(
-      currentTabIndex: 0,
-      child: const FeedScreenContent(),
-      onTabSelected: (index) => {},
-    );
+    return const FeedScreenContent();
   }
 }
 

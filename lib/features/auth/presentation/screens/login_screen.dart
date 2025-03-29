@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
   void _login() {
     if (_formKey.currentState!.validate()) {
       // TODO: Add login API call here.
-      Navigator.pushReplacementNamed(context, '/home/feed');
+      Navigator.pushReplacementNamed(context, '/home');
     }
   }
 

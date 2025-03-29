@@ -87,7 +87,7 @@ class _IOSWrapperState extends State<IOSWrapper>
       leading: Container(),
 
       middle: Image.asset(
-        'lib/assets/images/image.png', // Replace with your logo path.
+        'lib/assets/images/logo_black.png', // Replace with your logo path.
         height: 40,
       ),
       trailing: Row(

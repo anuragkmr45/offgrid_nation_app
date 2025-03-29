@@ -25,12 +25,12 @@ class _SplashScreenState extends State<SplashScreen> {
     // For iOS, use a Cupertino-styled scaffold; otherwise, use Material Scaffold.
     if (Platform.isIOS) {
       return CupertinoPageScaffold(
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.primary,
         child: _buildContent(),
       );
     } else {
       return Scaffold(
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.primary,
         body: _buildContent(),
       );
     }
@@ -38,20 +38,34 @@ class _SplashScreenState extends State<SplashScreen> {
 
   /// Builds the common content for the splash screen.
   Widget _buildContent() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final imageWidth = screenWidth * 0.8;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // App logo using an asset image.
-          Image.asset('lib/assets/images/image.png', width: 100, height: 100),
+          Text(
+            'Welcome to ',
+            style: TextStyle(
+              color: AppColors.textPrimary,
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 20),
+          Image.asset(
+            'lib/assets/images/image.png',
+            width: imageWidth,
+            height: 100,
+          ),
           const SizedBox(height: 20),
           // App Name Text
           Text(
-            'OffGrid Nation',
+            'Connect, Expore, and Thrive',
             style: TextStyle(
               color: AppColors.textPrimary,
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
             ),
           ),
         ],
